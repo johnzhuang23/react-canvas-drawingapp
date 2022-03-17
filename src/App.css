@@ -55,5 +55,25 @@ body {
   width:60px;
   margin: 15px 20px 15px 0;
   border-style: none;
+}
+.brush span{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: medium;
+  margin-right: 5px;
+}
+.btn-bg,
+.btn-export,
+.btn-clear{
+  margin: 15px 8px 5px 0;
+  height: 30px;
+  background-color: mistyrose;
+  color:#282c34;
+  border-style: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
+.btn-export{
+  background-color: tomato;
+  color:bisque;
+  font-weight: bold;
 }

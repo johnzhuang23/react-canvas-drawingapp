@@ -96,7 +96,7 @@ function App() {
         {/* <SketchPicker color={brushColor} onChangeComplete={changeColor} width={window.innerWidth * 0.18} /> */}
         <HexColorPicker color={brushColor} onChange={setBrushColor} />
 
-        <div className="brushwidth">
+        <div className="color-picker">
           <button style={{ background: brushColor }} className="btn-color-display"></button>
           <button style={{ background: "#D0021B" }} onClick={() => setBrushColor("#D0021B")} className="btn-color"></button>
           <button style={{ background: "#f5a623" }} onClick={() => setBrushColor("#f5a623")} className="btn-color"></button>
@@ -105,19 +105,21 @@ function App() {
           <button style={{ background: "#9900ef" }} onClick={() => setBrushColor("#9900ef")} className="btn-color"></button>
           <button style={{ background: "#555555" }} onClick={() => setBrushColor("#555555")} className="btn-color"></button>
           <button style={{ background: "#fff" }} onClick={() => setBrushColor("#fff")} className="btn-color"></button>
+        </div>
+        <div className="brush">
           <span>Brush size</span>
           <input type="range" min="1" max="70" defaultValue="10" className="brushwidth" onChange={(e) => { setLineWidth(e.target.value) }} />
         </div>
 
-        <button onClick={() => setBackgroundColor(brushColor)} className="button">background color</button>
+        <button onClick={() => setBackgroundColor(brushColor)} className="btn-bg">Set Background Color</button>
 
-        {/* <button onClick={() => setBackgroundColor("white")} className="button">Reset background</button> */}
+        {/* <button onClick={() => setBackgroundColor("white")} className="btn-bg">Reset background</button> */}
 
+        <button onClick={clear} className="btn-clear">Clear</button>
         <br />
-        <button onClick={clear}>Clear</button>
-        <button onClick={() => exportComponentAsPNG(canvasRef)} className="button">Export as PNG</button>
+        <button onClick={() => exportComponentAsPNG(canvasRef)} className="btn-export">Export as PNG</button>
       </div>
-    </div>
+    </div >
   )
 
 }
